@@ -11,7 +11,7 @@ function BreweryList() {
   }, []);
 
   return (
-    <div>
+    <div class="wrapper">
       <h2 align="center">Breweries</h2>
       <table>
         <thead>
