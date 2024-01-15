@@ -1,6 +1,5 @@
 // BreweryList.js
 import React, { useEffect, useState } from 'react';
-import './BreweryList.css';  // Import the CSS file
 
 function BreweryList() {
   const [breweries, setBreweries] = useState([]);
