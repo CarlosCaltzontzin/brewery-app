@@ -1,31 +1,59 @@
 // BreweryForm.js
 import React, { useState } from 'react';
-import axios from 'axios';
 
-const BreweryForm = ({ onAddBrewery }) => {
+function BreweryForm({ onAddBrewery }) {
   const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post('http://localhost:3001/breweries', { name });
-      onAddBrewery(response.data);
-      setName('');
-    } catch (error) {
-      console.error('Error adding brewery:', error);
-    }
+  const handleAddBrewery = () => {
+    // Fetch request to add brewery
+    fetch('http://localhost:3001/breweries', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        address: address,
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        onAddBrewery(data); // Invoke the callback with the new brewery data
+        setName('');
+        setAddress('');
+      })
+      .catch(error => console.error('Error adding brewery:', error));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Brewery Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <button type="submit">Add Brewery</button>
-    </form>
+    <div>
+      <h2 align="center">Add Brewery</h2>
+      <form>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Address:
+          <input
+            type="text"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+        </label>
+        <br />
+        <button type="button" onClick={handleAddBrewery}>
+          Add Brewery
+        </button>
+      </form>
+    </div>
   );
-};
+}
 
 export default BreweryForm;
