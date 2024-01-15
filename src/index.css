@@ -70,6 +70,7 @@ h2 {
   font-weight: 800;
   line-height: 1;
   margin: 0;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 /* Blockquote right double quotes */
