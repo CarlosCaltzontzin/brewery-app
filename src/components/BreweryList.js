@@ -10,11 +10,13 @@ function BreweryList() {
   }, []);
 
   return (
-    <div align="center">
-      <h2>Breweries</h2>
+    <div>
+      <h2 align="center">Breweries</h2>
       <ul>
         {breweries.map(brewery => (
-          <li key={brewery.id}>{brewery.name}</li>
+          <li key={brewery.id}>
+            <strong>Name:</strong> {brewery.name}, <strong>Address:</strong> {brewery.address}
+          </li>
         ))}
       </ul>
     </div>
