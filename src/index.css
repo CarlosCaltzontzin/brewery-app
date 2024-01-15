@@ -87,19 +87,19 @@ h2 {
 /* increase header size after 600px */
 @media all and (min-width: 600px) {
   .blockquote h1 {
-      font-size: 60px;
+      font-size: 40px;
  }
-
 }
 
 /* Blockquote subheader */
 .blockquote h4 {
   position: relative;
   color: #292a2b;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 1;
   margin: 0;
   padding-top: 20px;
   z-index: 1;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
