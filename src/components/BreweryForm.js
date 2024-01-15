@@ -27,7 +27,7 @@ function BreweryForm({ onAddBrewery }) {
   };
 
   return (
-    <div>
+    <div class="wrapper">
       <h2 align="center">Add Brewery</h2>
       <form>
         <label>
