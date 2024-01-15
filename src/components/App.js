@@ -1,22 +1,28 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 import NavBar from './NavBar';
 import Home from './Home';
 import BreweryList from './BreweryList';
 import BreweryForm from './BreweryForm';
 
-const App = () => (
-  <Router>
+function App() {
+  return (
     <div>
       <NavBar />
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/breweries" component={BreweryList} />
-        <Route path="/add" render={() => <BreweryForm />} />
-      </Switch>
+        <Route exact path="/" >
+          <Home />
+        </Route>
+        <Route path="/breweries">
+          <BreweryList />
+        </Route>
+        <Route path="/add">
+          <BreweryForm />
+        </Route>
+      </Switch>  
     </div>
-  </Router>
-);
+  );
+}
 
 export default App;

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Home = () => (
   <div>
-    <h2>Welcome to Brewery App</h2>
+    <h1>Breweries</h1>
     <p>Explore and add your favorite breweries!</p>
   </div>
 );
