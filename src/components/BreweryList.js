@@ -1,13 +1,14 @@
 // BreweryList.js
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
-const BreweryList = () => {
+function BreweryList() {
   const [breweries, setBreweries] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/breweries')
-      .then(response => setBreweries(response.data));
+    fetch('http://localhost:3001/breweries')
+      .then(response => response.json())
+      .then(data => setBreweries(data))
+      .catch(error => console.error('Error fetching breweries:', error));
   }, []);
 
   return (
@@ -20,6 +21,6 @@ const BreweryList = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default BreweryList;
