@@ -15,7 +15,9 @@ function BreweryList() {
       <ul>
         {breweries.map(brewery => (
           <li key={brewery.id}>
-            <strong>Name:</strong> {brewery.name}, <strong>Address:</strong> {brewery.address}
+            <strong>Name:</strong> {brewery.name}
+            <br />
+            <strong>Address:</strong> {brewery.address}
           </li>
         ))}
       </ul>
