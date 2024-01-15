@@ -1,4 +1,6 @@
+// BreweryList.js
 import React, { useEffect, useState } from 'react';
+import './BreweryList.css';  // Import the CSS file
 
 function BreweryList() {
   const [breweries, setBreweries] = useState([]);
@@ -12,15 +14,22 @@ function BreweryList() {
   return (
     <div>
       <h2 align="center">Breweries</h2>
-      <ul>
-        {breweries.map(brewery => (
-          <li key={brewery.id}>
-            <strong>Name:</strong> {brewery.name}
-            <br />
-            <strong>Address:</strong> {brewery.address}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          {breweries.map(brewery => (
+            <tr key={brewery.id}>
+              <td>{brewery.name}</td>
+              <td>{brewery.address}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
