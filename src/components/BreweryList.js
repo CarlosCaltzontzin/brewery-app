@@ -11,7 +11,7 @@ const BreweryList = () => {
   }, []);
 
   return (
-    <div>
+    <div align="center">
       <h2>Breweries</h2>
       <ul>
         {breweries.map(brewery => (
