@@ -27,11 +27,11 @@ function BreweryForm({ onAddBrewery }) {
   };
 
   return (
-    <div class="wrapper">
+    <div>
       <h2 align="center">Add Brewery</h2>
-      <form>
+      <form className="brewery-form">
         <label>
-          Name:
+          Brewery Name:
           <input
             type="text"
             value={name}
@@ -40,7 +40,7 @@ function BreweryForm({ onAddBrewery }) {
         </label>
         <br />
         <label>
-          Address:
+          Brewery Address:
           <input
             type="text"
             value={address}
