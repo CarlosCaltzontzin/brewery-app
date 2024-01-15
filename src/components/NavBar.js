@@ -1,15 +1,20 @@
-// NavBar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const NavBar = () => (
-  <nav>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/breweries">Breweries</Link></li>
-      <li><Link to="/add">Add Brewery</Link></li>
-    </ul>
-  </nav>
-);
+function NavBar() {
+  return(
+    <div className="navbar">
+      <NavLink exact to="/" >
+        Home
+      </NavLink>
+      <NavLink exact to="/breweries" >
+        Breweries
+      </NavLink>
+      <NavLink exact to="/add" >
+        Add Brewery
+      </NavLink>
+    </div>
+  )
+}
 
 export default NavBar;
