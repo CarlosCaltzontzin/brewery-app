@@ -1,3 +1,15 @@
 {
-    "breweries": []
-} 
+    "breweries": [
+      { "id": 1, "name": "Brewery 1", "address": "123 Main St, New York, NY" },
+      { "id": 2, "name": "Brewery 2", "address": "456 Oak St, Los Angeles, CA" },
+      { "id": 3, "name": "Brewery 3", "address": "789 Pine St, Chicago, IL" },
+      { "id": 4, "name": "Brewery 4", "address": "101 Maple St, Houston, TX" },
+      { "id": 5, "name": "Brewery 5", "address": "202 Cedar St, Phoenix, AZ" },
+      { "id": 6, "name": "Brewery 6", "address": "303 Elm St, Philadelphia, PA" },
+      { "id": 7, "name": "Brewery 7", "address": "404 Birch St, San Antonio, TX" },
+      { "id": 8, "name": "Brewery 8", "address": "505 Walnut St, San Diego, CA" },
+      { "id": 9, "name": "Brewery 9", "address": "606 Spruce St, Dallas, TX" },
+      { "id": 10, "name": "Brewery 10", "address": "707 Fir St, San Jose, CA" }
+    ]
+}
+  

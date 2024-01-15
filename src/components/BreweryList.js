@@ -1,4 +1,3 @@
-// BreweryList.js
 import React, { useEffect, useState } from 'react';
 
 function BreweryList() {
@@ -8,7 +7,6 @@ function BreweryList() {
     fetch('http://localhost:3001/breweries')
       .then(response => response.json())
       .then(data => setBreweries(data))
-      .catch(error => console.error('Error fetching breweries:', error));
   }, []);
 
   return (
