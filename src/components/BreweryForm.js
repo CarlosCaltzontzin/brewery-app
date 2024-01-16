@@ -4,15 +4,6 @@ function BreweryForm({ onAddBrewery, getNextId }) {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
-  const [breweries, setBreweries] = useState([]);
-
-  useEffect(() => {
-    // Fetch existing breweries to find the max ID
-    fetch('http://localhost:3001/breweries')
-      .then(response => response.json())
-      .then(data => setBreweries(data))
-      .catch(error => console.error('Error fetching breweries:', error));
-  }, []);
 
   const handleAddBrewery = () => {
     const nextId = getNextId();
