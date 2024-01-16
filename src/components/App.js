@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './NavBar';
 import Home from './Home';
@@ -6,6 +6,13 @@ import BreweryList from './BreweryList';
 import BreweryForm from './BreweryForm';
 
 function App() {
+  const [breweries, setBreweries] = useState([]);
+
+  const handleAddBrewery = (newBrewery) => {
+    // Update the list of breweries in the state
+    setBreweries([...breweries, newBrewery]);
+  };
+
   return (
     <div>
       <NavBar />
@@ -17,7 +24,7 @@ function App() {
           <BreweryList />
         </Route>
         <Route path="/add">
-          <BreweryForm />
+          <BreweryForm onAddBrewery={handleAddBrewery}/>
         </Route>
       </Switch>  
     </div>

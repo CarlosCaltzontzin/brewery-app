@@ -1,4 +1,3 @@
-// BreweryForm.js
 import React, { useState, useEffect } from 'react';
 
 function BreweryForm({ onAddBrewery }) {
@@ -35,7 +34,12 @@ function BreweryForm({ onAddBrewery }) {
         address: address,
       }),
     })
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to add brewery');
+        }
+        return response.json();
+      })
       .then(data => {
         onAddBrewery(data); // Invoke the callback with the new brewery data
         setName('');
@@ -59,7 +63,7 @@ function BreweryForm({ onAddBrewery }) {
   return (
     <div>
       <h2 align="center">Add Brewery</h2>
-      <form className="brewery-form">
+      <form className="brewery-form" onSubmit={(e) => { e.preventDefault(); handleAddBrewery(); }}>
         <label>
           Name:
           <input
@@ -78,7 +82,7 @@ function BreweryForm({ onAddBrewery }) {
           />
         </label>
         <br />
-        <button type="button" onClick={handleAddBrewery}>
+        <button type="submit">
           Add Brewery
         </button>
       </form>
