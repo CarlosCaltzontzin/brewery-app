@@ -8,6 +8,19 @@ import BreweryForm from './BreweryForm';
 function App() {
   const [breweries, setBreweries] = useState([]);
 
+  useEffect(() => {
+    // Fetch existing breweries to initialize the state
+    fetch('http://localhost:3001/breweries')
+      .then(response => response.json())
+      .then(data => setBreweries(data))
+      .catch(error => console.error('Error fetching breweries:', error));
+  }, []);
+
+  const getNextId = () => {
+    const maxId = Math.max(...breweries.map(brewery => brewery.id), 0);
+    return maxId + 1;
+  };
+
   const handleAddBrewery = (newBrewery) => {
     // Update the list of breweries in the state
     setBreweries([...breweries, newBrewery]);
@@ -24,7 +37,7 @@ function App() {
           <BreweryList />
         </Route>
         <Route path="/add">
-          <BreweryForm onAddBrewery={handleAddBrewery}/>
+          <BreweryForm onAddBrewery={handleAddBrewery} getNextId={getNextId}/>
         </Route>
       </Switch>  
     </div>

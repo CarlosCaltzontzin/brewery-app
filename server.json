@@ -49,6 +49,11 @@
       "id": 10,
       "name": "Brewery 10",
       "address": "707 Fir St, San Jose, CA"
+    },
+    {
+      "id": 1,
+      "name": "Test1",
+      "address": "Address1"
     }
   ]
 }

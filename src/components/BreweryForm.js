@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function BreweryForm({ onAddBrewery }) {
+function BreweryForm({ onAddBrewery, getNextId }) {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
@@ -13,11 +13,6 @@ function BreweryForm({ onAddBrewery }) {
       .then(data => setBreweries(data))
       .catch(error => console.error('Error fetching breweries:', error));
   }, []);
-
-  const getNextId = () => {
-    const maxId = Math.max(...breweries.map(brewery => brewery.id), 0);
-    return maxId + 1;
-  };
 
   const handleAddBrewery = () => {
     const nextId = getNextId();
