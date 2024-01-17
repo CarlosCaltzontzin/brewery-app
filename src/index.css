@@ -34,17 +34,9 @@ h2 {
   -webkit-text-stroke: 1px rgba(239, 236, 204, 0.55);
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: #333; /* Optional: Add background color */
-  padding: 10px; /* Optional: Add padding */
-}
-
-.nav-link {
-  text-decoration: none;
-  color: white; /* Optional: Set text color */
-}
+/***************************************************/
+/* Home component attributes                       */
+/***************************************************/
 
 /* Blockquote main style */
 .blockquote {
@@ -103,6 +95,22 @@ h2 {
   z-index: 1;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
+
+/***************************************************/
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333; /* Optional: Add background color */
+  padding: 10px; /* Optional: Add padding */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white; /* Optional: Set text color */
+}
+
+
 
 table {
   width: 100%;
