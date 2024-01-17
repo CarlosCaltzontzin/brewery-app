@@ -60,7 +60,9 @@ function BreweryForm({ onAddBrewery, getNextId }) {
   return (
     <div>
       <h2 align="center">Add Brewery</h2>
+      {/* Form for adding a new brewery, with event handling to call 'handleAddBrewery' on submit */}
       <form className="brewery-form" onSubmit={(e) => { e.preventDefault(); handleAddBrewery(); }}>
+        {/* Input field for the brewery name */}
         <label>
           Name:
           <input
@@ -69,7 +71,7 @@ function BreweryForm({ onAddBrewery, getNextId }) {
             onChange={(e) => setName(e.target.value)}
           />
         </label>
-        <br />
+        {/* Input field for the brewery address */}
         <label>
           Address:
           <input
@@ -78,11 +80,10 @@ function BreweryForm({ onAddBrewery, getNextId }) {
             onChange={(e) => setAddress(e.target.value)}
           />
         </label>
-        <br />
-        <button type="submit">
-          Add Brewery
-        </button>
+        {/* Submit button for adding a new brewery */}
+        <button type="submit">Add Brewery</button>
       </form>
+      {/* Display the message (success or error) */}
       {message && <div>{message}</div>}
     </div>
   );
