@@ -8,21 +8,22 @@ import BreweryForm from './BreweryForm';
 function App() {
   const [breweries, setBreweries] = useState([]);
 
+  // Fetch existing breweries to initialize the state
   useEffect(() => {
-    // Fetch existing breweries to initialize the state
     fetch('http://localhost:3001/breweries')
       .then(response => response.json())
       .then(data => setBreweries(data))
       .catch(error => console.error('Error fetching breweries:', error));
   }, []);
 
+  // Calculate the next available ID for a new brewery
   const getNextId = () => {
     const maxId = Math.max(...breweries.map(brewery => brewery.id), 0);
     return maxId + 1;
   };
 
+  // Update the list of breweries in the state
   const handleAddBrewery = (newBrewery) => {
-    // Update the list of breweries in the state
     setBreweries([...breweries, newBrewery]);
   };
 
