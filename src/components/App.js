@@ -35,7 +35,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/breweries">
-          <BreweryList />
+          <BreweryList breweries={breweries} />
         </Route>
         <Route path="/add">
           <BreweryForm onAddBrewery={handleAddBrewery} getNextId={getNextId}/>

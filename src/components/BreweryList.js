@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-function BreweryList() {
+function BreweryList({ breweries }) {
+  /*
   const [breweries, setBreweries] = useState([]);
 
   // Fetch request to get the list of breweries and update the state
@@ -9,7 +10,7 @@ function BreweryList() {
     .then(response => response.json())
     .then(data => setBreweries(data))
   }, []);
-  
+  */
   return (
     <div class="wrapper">
       <h2 align="center">Breweries</h2>
