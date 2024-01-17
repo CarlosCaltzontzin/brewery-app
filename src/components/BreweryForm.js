@@ -33,25 +33,30 @@ function BreweryForm({ onAddBrewery, getNextId }) {
       return response.json();
     })
     .then(data => {
-      onAddBrewery(data); // Invoke the callback with the new brewery data
-      setName('');        // Clear the name input field
-      setAddress('');     // Clear the address input field
-      setMessage('Added brewery'); // Set the success message
-        // Clear the message after a few seconds
-        setTimeout(() => {
-          setMessage('');
-        }, 3000);
-      })
-      .catch(error => {
-        console.error('Error adding brewery:', error);
-        setMessage('Failed to add brewery'); // Set the error message
-        // Clear the message after a few seconds
-        setTimeout(() => {
-          setMessage('');
-        }, 3000);
-      });
+      // Invoke the callback with the new brewery data
+      onAddBrewery(data);
+      // Clear the name and address input fields
+      setName('');
+      setAddress('');
+      // Set the success message
+      setMessage('Added brewery'); 
+      // Clear the success message after a few seconds
+      setTimeout(() => {
+        setMessage('');
+      }, 3000);
+    })
+    .catch(error => {
+      // Log errors if any during the fetch operation
+      console.error('Error adding brewery:', error);
+      // Set an error message
+      setMessage('Failed to add brewery');
+      // Clear the error message after a few seconds
+      setTimeout(() => {
+        setMessage('');
+      }, 3000);
+    });
   };
-
+  
   return (
     <div>
       <h2 align="center">Add Brewery</h2>
