@@ -5,32 +5,38 @@ function BreweryForm({ onAddBrewery, getNextId }) {
   const [address, setAddress] = useState('');
   const [message, setMessage] = useState('');
 
+  // Function to add a new brewery
   const handleAddBrewery = () => {
-    const nextId = getNextId();
 
+    // Get the next available ID using the 'getNextId' function
+    const nextId = getNextId();
+    
     // Fetch request to add brewery
     fetch('http://localhost:3001/breweries', {
       method: 'POST',
-      headers: {
+      headers: { 
         'Content-Type': 'application/json',
       },
+      // Convert the data to JSON format
       body: JSON.stringify({
         id: nextId,
         name: name,
         address: address,
       }),
     })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to add brewery');
-        }
-        return response.json();
-      })
-      .then(data => {
-        onAddBrewery(data); // Invoke the callback with the new brewery data
-        setName('');
-        setAddress('');
-        setMessage('Added brewery'); // Set the success message
+    .then(response => {
+      // Check if the response is OK; if not, throw an error
+      if (!response.ok) {
+        throw new Error('Failed to add brewery');
+      }
+      
+      return response.json();
+    })
+    .then(data => {
+      onAddBrewery(data); // Invoke the callback with the new brewery data
+      setName('');        // Clear the name input field
+      setAddress('');     // Clear the address input field
+      setMessage('Added brewery'); // Set the success message
         // Clear the message after a few seconds
         setTimeout(() => {
           setMessage('');
