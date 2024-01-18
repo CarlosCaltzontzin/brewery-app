@@ -54,7 +54,7 @@ To run the application locally, follow these steps:
 git clone https://github.com/CarlosCaltzontzin/brewery-app.git
 ```
 
-or SSH
+    or SSH
 ```bash
 git clone git@github.com:CarlosCaltzontzin/brewery-app.git
 ```
