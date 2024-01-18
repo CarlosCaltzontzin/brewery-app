@@ -35,7 +35,7 @@ A form component for adding new breweries. It sends a POST request to the backen
 
 ### BreweryList
 
-Displays a list of breweries fetched from the backend. It fetches data on component mount and updates the UI accordingly.
+Displays a list of breweries fetched from the backend. It fetches data on component mount and updates the user interface (UI) accordingly. 
 
 ### Home
 
