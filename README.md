@@ -16,8 +16,6 @@ View a list of breweries and add your favorite breweries with this simple React 
   - [NavBar](#navbar)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Scripts](#scripts)
-- [License](#license)
 
 ## Overview
 
