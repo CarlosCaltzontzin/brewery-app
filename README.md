@@ -3,7 +3,6 @@
 ## Project Description
 
 For my phase-2 project at Flatiron school I created a simple brewery directory. 
-
 Explore and add your favorite breweries with this simple React application.
 
 ## Table of Contents
