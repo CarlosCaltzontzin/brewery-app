@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Flatiron School Phase 2 Project - Brewery Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+
+For my phase-2 project at Flatiron school I created a simple brewery directory. 
+My app uses HTML/CSS/JS/JSX as a frontend and accesses data from a . The public API, https://api.openbrewerydb.org/breweries, is free and require no authorization. 
+
+Once the app loads, it will display all distinct states from the API. When you click on a state, it will display a list of brewery names and addresses for that state. A simple directory.
 
 ## Available Scripts
 
