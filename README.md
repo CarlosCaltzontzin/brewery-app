@@ -78,6 +78,7 @@ npm run dev
 
 Access the application at http://localhost:3001
 
+'npm run dev' runs the concurrently command.  
 ## Available Scripts
 
 In the project directory, you can run:
