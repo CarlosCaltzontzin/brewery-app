@@ -59,12 +59,14 @@ or SSH
 git clone git@github.com:CarlosCaltzontzin/brewery-app.git
 ```
 
-# 2. Change into the project directory
+2. Change into the project directory
+```bash
 cd brewery-app
+```
 
-# 3. Install dependencies
+3. Install dependencies
+```bash
 npm install
-
 ```
 
 ## USAGE
