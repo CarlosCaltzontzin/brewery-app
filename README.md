@@ -27,7 +27,7 @@ The brewery directory is a simple React application that allows users to view a 
 
 ### App
 
-The main component that serves as the entry point for the application. It handles routing, fetches existing breweries, and manages state.
+The main component serves as the entry point for the application. It handles routing, fetches existing breweries, and manages state.
 
 ### BreweryForm
 
@@ -39,7 +39,7 @@ Displays a list of breweries fetched from the backend. It fetches data on compon
 
 ### Home
 
-The landing page component that welcomes users and displays a quote about beer.
+The landing page component that welcomes users.
 
 ### NavBar
 
