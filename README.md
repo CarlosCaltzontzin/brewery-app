@@ -78,14 +78,19 @@ npm run dev
 
 Access the application at http://localhost:3001
 
-'npm run dev' runs the concurrently command.  
+'npm run dev' runs the concurrently command. If you arn't able to run the 'npm run dev' command because you don't have concurrently installed, you can install it globally or locally. Below is the command to install it globally:
+
+```bash
+npm install -g concurrently
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
