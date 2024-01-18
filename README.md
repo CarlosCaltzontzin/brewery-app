@@ -3,7 +3,7 @@
 ## Project Description
 
 For my phase-2 project at Flatiron school I created a simple brewery directory. 
-Explore and add your favorite breweries with this simple React application.
+View a list of breweries and add your favorite breweries with this simple React application.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ Explore and add your favorite breweries with this simple React application.
 
 ## Overview
 
-The Breweries Explorer is a React application that allows users to view a list of breweries, add new breweries, and explore information about their favorite places. The application includes different components such as the main App, BreweryForm for adding new breweries, BreweryList for displaying existing breweries, Home for the landing page, and NavBar for navigation.
+The brewery directory is a simple React application that allows users to view a list of breweries and add new breweries. The application includes different components such as the main App, BreweryForm for adding new breweries, BreweryList for displaying existing breweries, Home for the landing page, and NavBar for navigation.
 
 ## Components
 
