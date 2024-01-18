@@ -7,6 +7,71 @@ My app uses HTML/CSS/JS/JSX as a frontend and accesses data from a . The public 
 
 Once the app loads, it will display all distinct states from the API. When you click on a state, it will display a list of brewery names and addresses for that state. A simple directory.
 
+
+# Breweries Explorer
+
+Explore and add your favorite breweries with this simple React application.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Components](#components)
+  - [App](#app)
+  - [BreweryForm](#breweryform)
+  - [BreweryList](#brewerylist)
+  - [Home](#home)
+  - [NavBar](#navbar)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [License](#license)
+
+## Overview
+
+The Breweries Explorer is a React application that allows users to view a list of breweries, add new breweries, and explore information about their favorite places. The application includes different components such as the main App, BreweryForm for adding new breweries, BreweryList for displaying existing breweries, Home for the landing page, and NavBar for navigation.
+
+## Components
+
+### App
+
+The main component that serves as the entry point for the application. It handles routing, fetches existing breweries, and manages state.
+
+### BreweryForm
+
+A form component for adding new breweries. It sends a POST request to the backend, updates the state with the new brewery, and displays success or error messages.
+
+### BreweryList
+
+Displays a list of breweries fetched from the backend. It fetches data on component mount and updates the UI accordingly.
+
+### Home
+
+The landing page component that welcomes users and displays a quote about beer.
+
+### NavBar
+
+A simple navigation bar component with links to Home, Breweries, and Add Brewery.
+
+## Installation
+
+To run the application locally, follow these steps:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/breweries-explorer.git
+
+# Change into the project directory
+cd breweries-explorer
+
+# Install dependencies
+npm install
+
+
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
