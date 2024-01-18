@@ -47,19 +47,16 @@ A simple navigation bar component with links to Home, Breweries, and Add Brewery
 
 ## Installation
 
-To run the application locally, follow these steps:
+To run the application locally, follow these steps (assumming you have npm installed):
 
 ```bash
-# Clone the repository with HTTPS
+# 1. Clone the repository with HTTPS
 git clone https://github.com/CarlosCaltzontzin/brewery-app.git
 
 # or SSH
-
 git clone git@github.com:CarlosCaltzontzin/brewery-app.git
 
-
-
-# Change into the project directory
+# 2. Change into the project directory
 cd breweries-explorer
 
 # Install dependencies
