@@ -50,11 +50,10 @@ A simple navigation bar component with links to Home, Breweries, and Add Brewery
 To run the application locally, follow these steps:
 
 1. Clone the repository with HTTPS
-```bash
-git clone https://github.com/CarlosCaltzontzin/brewery-app.git
-```
 
-    or SSH
+    git clone https://github.com/CarlosCaltzontzin/brewery-app.git
+
+or SSH
 ```bash
 git clone git@github.com:CarlosCaltzontzin/brewery-app.git
 ```
