@@ -10,7 +10,7 @@ function App() {
 
   // Fetch existing breweries to initialize the state
   useEffect(() => {
-    fetch('http://localhost:3001/breweries')
+    fetch('http://localhost:3000/breweries')
       .then(response => response.json())
       .then(data => setBreweries(data))
       .catch(error => console.error('Error fetching breweries:', error));

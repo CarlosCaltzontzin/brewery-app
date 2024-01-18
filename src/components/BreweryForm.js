@@ -12,7 +12,7 @@ function BreweryForm({ onAddBrewery, getNextId }) {
     const nextId = getNextId();
     
     // Fetch request to add brewery
-    fetch('http://localhost:3001/breweries', {
+    fetch('http://localhost:3000/breweries', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
