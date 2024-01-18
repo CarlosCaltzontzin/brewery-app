@@ -62,8 +62,17 @@ cd brewery-app
 # 3. Install dependencies
 npm install
 
+```
 
+## USAGE
 
+Start the React development server and json-server concurrently
+
+```bash
+npm run dev
+```
+
+Access the application at http://localhost:3001
 
 ## Available Scripts
 
