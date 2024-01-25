@@ -74,7 +74,7 @@ Start the React development server and json-server concurrently
 npm run dev
 ```
 
-Access the application at http://localhost:3001
+Access the application at http://localhost:3000
 
 'npm run dev' runs the concurrently command. If you arn't able to run the 'npm run dev' command because you don't have concurrently installed, you can install it globally or locally. Below is the command to install it globally:
 
